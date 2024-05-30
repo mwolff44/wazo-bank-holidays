@@ -1,0 +1,27 @@
+#!/bin/sh
+# Copyright 2014-2024 Wazo Team (see the AUTHORS file)
+# SPDX-License-Identifier: GPL-3.0+
+
+case "$1" in
+    build)
+        python3 setup.py bdist
+        ;;
+
+    package)
+        tar xvf dist/wazo_bank_holidays-*.tar.gz -C ${pkgdir}
+        cp -R etc ${pkgdir}/
+        ;;
+
+    install)
+	/usr/sbin/asterisk -rx 'core reload'
+        ;;
+
+    uninstall)
+	/usr/sbin/asterisk -rx 'core reload'
+        ;;
+
+    *)
+        echo "$0 called with unknown argument '$1'" >&2
+        exit 1
+    ;;
+esac
