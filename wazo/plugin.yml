@@ -1,4 +1,4 @@
-name: wazo_bank_holidays
+name: wazo-bank-holidays
 namespace: mwolff44
 version: 1.0.0
 author: Mathias WOLFF
@@ -6,4 +6,4 @@ display_name: Bank holidays
 min_wazo_version: 24.06
 tags:
   - schedules
-homepage: https://github.com/mwolff44/wazo_bank_holidays
+homepage: https://github.com/mwolff44/wazo-bank-holidays
